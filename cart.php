@@ -11,7 +11,11 @@ if (isset($_POST['logout'])) {
   header('location: login.php');
 }
 
+// update product in cart
 
+if (isset($_POST['update_cart'])) {
+  $cart_id = $_POST['$cart_id'];
+}
 
 
 
