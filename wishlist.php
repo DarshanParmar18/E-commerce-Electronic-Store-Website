@@ -19,7 +19,7 @@ if (isset($_POST['add_to_cart'])) {
   $product_id = $_POST['product_id'];
 
   $qty = 1;
-  // $qty = preg_replace("/[^a-zA-Z ]/", "", $qty);
+  $qty = strip_tags($qty);
 
   $varify_cart = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ? AND product_id = ?");
   $varify_cart->execute([$user_id, $product_id]);

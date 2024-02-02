@@ -11,9 +11,9 @@ if (isset($_SESSION['user_id'])) {
 if (isset($_POST['submit'])) {
     $id = unique_id();
     $email = $_POST['email'];
-    // $email = preg_replace("/[^a-zA-Z ]/", "", $email);
+    $email = strip_tags($email);
     $pass = $_POST['pass'];
-    // $pass = preg_replace("/[^a-zA-Z ]/", "", $pass);
+    $pass = strip_tags($pass);
 
     $select_user = $conn->prepare("SELECT * FROM `users` WHERE email = ? AND password = ?");
     $select_user->execute([$email, $pass]);

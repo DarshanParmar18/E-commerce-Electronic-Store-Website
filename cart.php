@@ -132,7 +132,8 @@ if (isset($_POST["empty_cart"])) {
             <form action="" method="post">
               <button type="submit" name="empty_cart" class="btn" onclick="return confirm('are you sure to empty your cart')">Empty cart</button>
             </form>
-            <a href="checkout.php" class="btn">proceed to checkout</a>
+            <!-- <a href="checkout.php" class="btn">proceed to checkout</a> -->
+            <a href="checkout.php?get_id=<?= $fetch_product['id']; ?>" class="btn">proceed to checkout</a>
           </div>
         </div>
       <?php

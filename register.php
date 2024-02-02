@@ -11,13 +11,13 @@ if (isset($_SESSION['user_id'])) {
 if (isset($_POST['submit'])) {
     $id = unique_id();
     $name = $_POST['name'];
-    $name = preg_replace("/[^a-zA-Z ]/", "", $name);
+    $name = strip_tags($name);
     $email = $_POST['email'];
-    // $email = preg_replace("/[^a-zA-Z ]/", "", $email);
+    $email = strip_tags($email);
     $pass = $_POST['pass'];
-    // $pass = preg_replace("/[^a-zA-Z ]/", "", $pass);
+    $pass = strip_tags($pass);
     $cpass = $_POST['cpass'];
-    // $cpass = preg_replace("/[^a-zA-Z ]/", "", $cpass);
+    $cpass = strip_tags($cpass);
 
     $select_user = $conn->prepare("SELECT * FROM `users` WHERE email = ?");
     $select_user->execute([$email]);

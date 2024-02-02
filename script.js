@@ -53,7 +53,7 @@ const scrollLeft = () => {
     behavior: "smooth",
   });
 };
-let timerId = setInterval(scrollRight, 0);
+let timerId = setInterval(scrollRight, 70000);
 
 // -----------------reset timer to scroll right-----------------
 
