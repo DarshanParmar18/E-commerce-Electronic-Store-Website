@@ -7,10 +7,10 @@
 </div>
 
 <footer>
-    <div class="overlay"></div>
+    <!-- <div class="overlay"></div> -->
     <div class="footer-content">
         <div class="img-box">
-            <img src="./img/logo2.png" alt="logo2">
+            <img src="/img/logo.jpg" alt="logo2">
         </div>
         <div class="inner-footer">
             <div class="card">
@@ -59,7 +59,7 @@
             </div>
         </div>
         <div class="bottom-footer">
-            <p>All right reserved - code with selena</p>
+            <p>All right reserved </p>
         </div>
     </div>
 </footer>

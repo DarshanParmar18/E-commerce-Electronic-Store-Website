@@ -32,6 +32,15 @@ if (isset($_POST['logout'])) {
   <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdnjs.cloudfare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script> -->
   <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- iconic icon -->
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
 
 </head>
 
@@ -132,7 +141,7 @@ if (isset($_POST['logout'])) {
 
 
     <section class="shop-category">
-      <div class="box-container">
+      <div class="flex">
         <div class="box">
           <img src="./img/electronicImgs/canonCamera2.jpg" alt="">
           <div class="detail">
@@ -158,27 +167,10 @@ if (isset($_POST['logout'])) {
     </section>
 
 
-
-    <div class="categories">
-      <div class="cir c1">
-        <h5 class="cat-names">Mobile Phones</h5>
-      </div>
-      <div class="cir c2">
-        <h5 class="cat-names">Camera & Accessories</h5>
-      </div>
-      <div class="cir c3">
-        <h5 class="cat-names">Television</h5>
-      </div>
-      <div class="cir c4">
-        <h5 class="cat-names">Play Staions</h5>
-      </div>
-      <div class="cir c5">
-        <h5 class="cat-names">Home Appliances</h5>
-      </div>
-    </div>
+    <?php include 'categories.php'; ?>
 
 
-    <section class="thumb">
+    <!-- <section class="thumb">
       <div class="box-container">
         <div class="box">
           <img src="./img/thumb2.jpg" alt="">
@@ -205,7 +197,7 @@ if (isset($_POST['logout'])) {
           <i class="bx bx-chevron-right"></i>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class='container'>
       <div class="box-container">
@@ -317,11 +309,15 @@ if (isset($_POST['logout'])) {
       </div>
     </section>
 
+    <section class=""></section>
     <?php include 'components/footer.php'; ?>
   </div>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <?php include 'components/alert.php'; ?>
+  <!-- iconic icon -->
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   <script src="./script.js"></script>
+
 </body>
 
 </html>

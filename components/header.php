@@ -1,13 +1,74 @@
 <header class='header'>
-    <div class="flex">
+    <!-- <div class="header-top">
+
+        <div class="container">
+
+            <ul class="header-social-container">
+
+                <li>
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="header-alert-news">
+                <p>
+                    <b>Free Shipping</b>
+                    This Week Order Over - $55
+                </p>
+            </div>
+
+            <div class="header-top-actions">
+
+                <select name="currency">
+
+                    <option value="usd">USD &dollar;</option>
+                    <option value="eur">EUR &euro;</option>
+
+                </select>
+
+                <select name="language">
+
+                    <option value="en-US">English</option>
+                    <option value="es-ES">Espa&ntilde;ol</option>
+                    <option value="fr">Fran&ccedil;ais</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+    </div> -->
+    <nav class="flex">
         <a href="home.php" class="logo"><img src="./img/logo.jpg" alt="Logo"></a>
-        <nav class="navbar">
+        <div class="navbar">
             <a href="home.php">Home</a>
             <a href="view_products.php">Products</a>
             <a href="order.php">Orders</a>
             <a href="about.php">About us</a>
             <a href="contact.php">Contact us</a>
-        </nav>
+        </div>
         <div class="icons">
             <i class="bx bxs-user" id="user-btn"></i>
             <?php
@@ -33,5 +94,5 @@
                 <button type="submit" name="logout" class="logout-btn">Log out</button>
             </form>
         </div>
-    </div>
+    </nav>
 </header>

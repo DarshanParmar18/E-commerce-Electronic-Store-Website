@@ -15,6 +15,14 @@ if (isset($_POST['logout'])) {
 
 if (isset($_POST['update_cart'])) {
   $cart_id = $_POST['$cart_id'];
+  $cart_id = strip_tags($cart_id);
+  $qty = $_POST['qty'];
+  $qty = strip_tags($qty);
+
+  $update_qty = $conn->prepare("UPDATE `cart` SET qty=? WHERE id = ?");
+  $update_qty->execute([$qty, $cart_id]);
+
+  $success_msg[] = "cart quantity updated successfully";
 }
 
 

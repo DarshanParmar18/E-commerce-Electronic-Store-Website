@@ -44,55 +44,52 @@ if (isset($_POST['logout'])) {
       <a href="./home.php"><span>Our Order</span></a>
     </div>
 
-    <section class="products">
+    <section class="orders">
+      <div class="title">
+        <img src="./img/download.png" alt="" class="logo">
+        <h1>My orders</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni obcaecati, perferendis voluptatibus corrupti porro illo.</p>
+      </div>
+
       <div class="box-container">
-        <div class="title">
-          <img src="./img/download.png" alt="" class="logo">
-          <h1>My orders</h1>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni obcaecati, perferendis voluptatibus corrupti porro illo.</p>
-        </div>
-        <div class="box-container">
-          <?php
-          $select_orders = $conn->prepare("SELECT * FROM `orders` WHERE user_id = ? ORDER BY Date DESC");
-          $select_orders->execute([$user_id]);
-          if ($select_orders->rowCount() > 0) {
-            while ($fetch_order = $select_orders->fetch(PDO::FETCH_ASSOC)) {
-              $select_products = $conn->prepare("SELECT * FROM `products` WHERE id = ?");
-              $select_products->execute([$fetch_order["product_id"]]);
-              if ($select_products->rowCount() > 0) {
-                while ($fetch_product = $select_products->fetch(PDO::FETCH_ASSOC)) {
-          ?>
-                  <div class="box" <?php if ($fetch_order['status'] == 'canceled') {
-                                      echo 'style="border:2px solid red";';
-                                    } ?>>
-                    <a href="view_order.php?get_id=<?= $fetch_order['id']; ?>">
-                      <p class="date"><i class="bi bi-calender-fill"></i><span><?= $fetch_order['date'] ?></span></p>
-                      <img src="data:image;base64,<?php echo base64_encode($fetch_product['image']); ?>" alt="" class="img">
-                      <div class="row">
-                        <h3 class="name"><?= $fetch_product['name']; ?></h3>
-                        <p class="price">Price : $<?= $fetch_order['price']; ?> X <?= $fetch_order['qty']; ?></p>
-                        <p class="status" style="color:<?php if ($fetch_order['status'] == 'delivered') {
-                                                          echo 'green';
-                                                        } else if ($fetch_order['status'] == 'canceled') {
-                                                          echo 'red';
-                                                        } else {
-                                                          echo 'orange';
-                                                        } ?>"><?= ucfirst($fetch_order['status']); ?></p>
-                      </div>
-                    </a>
-                  </div>
-          <?php
-                }
-              } else {
-                echo 'Error';
+        <?php
+        $select_orders = $conn->prepare("SELECT * FROM `orders` WHERE user_id = ? ORDER BY date DESC");
+        $select_orders->execute([$user_id]);
+        if ($select_orders->rowCount() > 0) {
+          while ($fetch_order = $select_orders->fetch(PDO::FETCH_ASSOC)) {
+            $select_products = $conn->prepare("SELECT * FROM `products` WHERE id = ?");
+            $select_products->execute([$fetch_order["product_id"]]);
+            if ($select_products->rowCount() > 0) {
+              while ($fetch_product = $select_products->fetch(PDO::FETCH_ASSOC)) {
+        ?>
+                <div class="box" <?php if ($fetch_order['status'] == 'canceled') {
+                                    echo 'style="border:2px solid red";';
+                                  } ?>>
+                  <a href="view_order.php?get_id=<?= $fetch_order['id']; ?>">
+                    <p class="date"><i class="bi bi-calender-fill"></i><span><?= $fetch_order['date'] ?></span></p>
+                    <img src="data:image;base64,<?php echo base64_encode($fetch_product['image']); ?>" alt="" class="img">
+                    <div class="row">
+                      <h3 class="name"><?= $fetch_product['name']; ?></h3>
+                      <p class="price">Price : $<?= $fetch_order['price']; ?> X <?= $fetch_order['qty']; ?></p>
+                      <p class="status" style="color:<?php if ($fetch_order['status'] == 'delivered') {
+                                                        echo 'green';
+                                                      } else if ($fetch_order['status'] == 'canceled') {
+                                                        echo 'red';
+                                                      } else {
+                                                        echo 'orange';
+                                                      } ?>"><?= $fetch_order['status']; ?></p>
+                    </div>
+                  </a>
+                </div>
+        <?php
               }
             }
-          } else {
-
-            echo '<p class="empty"> no order takes placed yet!</p>';
           }
-          ?>
-        </div>
+        } else {
+
+          echo '<p class="empty"> no order takes placed yet!</p>';
+        }
+        ?>
       </div>
     </section>
 

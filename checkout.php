@@ -17,7 +17,7 @@ if (isset($_POST["place_order"])) {
   $number = strip_tags($number);
   $email = $_POST['email'];
   $email = strip_tags($email);
-  $address = $_POST['flat'] . ' ' . $_POST['street'] . ' ' . $_POST['city'] . ' ' . $_POST['country'] . ' ' . $_POST['pincode'];
+  $address = $_POST['flat'] . ', ' . $_POST['street'] . ', ' . $_POST['city'] . ', ' . $_POST['country'] . ', ' . $_POST['pincode'];
   $address = strip_tags($address);
   $address_type = $_POST['address_type'];
   $address_type = strip_tags($address_type);
@@ -60,7 +60,7 @@ if (isset($_POST["place_order"])) {
     $get_product->execute([$_GET['get_id']]);
     if ($get_product->rowCount() > 0) {
       while ($fetch_p = $get_product->fetch(PDO::FETCH_ASSOC)) {
-        $insert_order = $conn->prepare("INSERT INTO `orders`(id, user_id, name, number, email, address, address_type, method, product_id, price, qty) VALUES(?,?,?,?,?,?,?,?,?,?,?)");
+        $insert_order = $conn->prepare("INSERT INTO `orders`(id, user_id, name, number, email, address, address_type, method, product_id, price, qty, date) VALUES(?,?,?,?,?,?,?,?,?,?,?,NOW())");
         $insert_order->execute([unique_id(), $user_id, $name, $number, $email, $address, $address_type, $method, $fetch_p['id'], $fetch_p['price'], 1]);
       }
     } else {
@@ -68,8 +68,8 @@ if (isset($_POST["place_order"])) {
     }
   } else if ($varify_cart->rowCount() > 0) {
     while ($f_cart = $varify_cart->fetch(PDO::FETCH_ASSOC)) {
-      $insert_order = $conn->prepare("INSERT INTO `orders`(id, user_id, name, number, email, address, address_type, method, product_id, price, qty) VALUES(?,?,?,?,?,?,?,?,?,?,?)");
-      $insert_order->execute([unique_id(), $user_id, $name, $number, $email, $address, $address_type, $method, $f_cart['product_id'], $f_cart['price'], 1]);
+      $insert_order = $conn->prepare("INSERT INTO `orders`(id, user_id, name, number, email, address, address_type, method, product_id, price, qty, date) VALUES(?,?,?,?,?,?,?,?,?,?,?,NOW())");
+      $insert_order->execute([unique_id(), $user_id, $name, $number, $email, $address, $address_type, $method, $f_cart['id'], $f_cart['price'], $f_cart['qty']]);
     }
 
     if ($insert_order) {
@@ -202,7 +202,7 @@ if (isset($_POST["place_order"])) {
                 $grand_total += $sub_total;
             ?>
                 <div class="flex">
-                  <img src="data:image;base64,<?php echo base64_encode($fetch_get['image']); ?>" alt="" class="img">
+                  <img src="data:image;base64,<?php echo base64_encode($fetch_get['image']); ?>" class="img">
                   <div>
                     <h3 class="name"><?= $fetch_get['name']; ?></h3>
                     <p class="price"><?= $fetch_get['price']; ?>/-</p>
