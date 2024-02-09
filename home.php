@@ -140,7 +140,7 @@ if (isset($_POST['logout'])) {
     </section>
 
 
-    <section class="shop-category">
+    <section class="shop-category align">
       <div class="flex">
         <div class="box">
           <img src="./img/electronicImgs/canonCamera2.jpg" alt="">
@@ -199,16 +199,19 @@ if (isset($_POST['logout'])) {
       </div>
     </section> -->
 
-    <section class='container'>
+    <section class='container align'>
       <div class="box-container">
         <div class="box box-left">
-          <img src="./img/electronicImgs/galaxy s24.webp" alt="">
+          <img src="./img/electronicImgs/AdWatch1.png" alt="">
         </div>
-        <div class="box box-right">
+        <div class="box box-mid">
           <!-- <img src="./img/download.png" alt=""> -->
           <span>Mobile Sale</span>
           <h1>Save up to 50% Off</h1>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate soluta dolore consequatur!</p>
+        </div>
+        <div class="box box-right">
+          <img src="./img/electronicImgs/AdWatch2.png" alt="">
         </div>
       </div>
     </section>

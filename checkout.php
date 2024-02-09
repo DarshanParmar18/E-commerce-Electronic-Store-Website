@@ -123,7 +123,7 @@ if (isset($_POST["place_order"])) {
       <a href="./home.php"><span>/ Checkout Summary</span></a>
     </div>
 
-    <section class="checkout">
+    <section class="checkout align">
       <div class="title">
         <img src="./img/download.png" alt="logo" class="logo">
         <h1>Checkout Summary</h1>

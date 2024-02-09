@@ -53,6 +53,11 @@ button {
   cursor: pointer;
 }
 
+.align {
+  width: 85vw;
+  margin: auto;
+}
+
 .btn {
   line-height: 2;
   background-color: rgba(255, 255, 255, 0);
@@ -391,6 +396,7 @@ nav.flex {
 /* -----------------------------------categories section --------------------------*/
 
 .categories-container {
+  height: 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -770,6 +776,11 @@ nav.flex {
   cursor: pointer;
 }
 
+/* -------------------------------container------------------------ */
+.container {
+  background-color: aquamarine;
+  border-radius: var(--border-radius-sm);
+}
 .container .box {
   text-align: center;
   display: flex;
@@ -777,11 +788,7 @@ nav.flex {
   align-items: center;
   justify-content: center;
 }
-.box-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-  align-items: center;
-}
+
 .container .box span {
   color: var(--primary-color);
   font-size: 2rem;
@@ -795,14 +802,15 @@ nav.flex {
   margin-bottom: 1rem;
 }
 .container .box-left img {
-  position: relative;
-  left: 45%;
+  height: 14rem;
 }
 
-.container .box-right {
-  position: relative;
-  right: 100%;
+.container .box-mid {
   z-index: 10;
+}
+
+.container .box-right img {
+  height: 14rem;
 }
 
 /* ----------------------shop------------------------------------ */
@@ -813,6 +821,7 @@ nav.flex {
   padding: 2rem 1rem;
 }
 .shop .row {
+  margin: 2rem auto;
   display: flex;
   justify-content: space-evenly;
 }
@@ -824,6 +833,7 @@ nav.flex {
   padding: 3rem 1rem;
 }
 .shop .box-container {
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 .shop .box-container .box {
@@ -843,10 +853,10 @@ nav.flex {
 
 /* ------------shop-category------- */
 
-.shop-category {
+/* .shop-category {
   width: 85vw;
   margin: auto;
-}
+} */
 .shop-category .flex {
   justify-content: space-around;
 }
@@ -897,11 +907,11 @@ nav.flex {
   color: var(--primary-color);
 }
 .services img {
-  width: 30%;
+  width: 5rem;
 }
 /* -------------------brands---------- */
 .brand {
-  margin: 3rem auto;
+  margin: 5rem auto;
   text-align: center;
 }
 
@@ -1394,10 +1404,10 @@ footer .bottom-footer {
 
 /* -------------------------------------checkout screen-------------------------------------- */
 
-.checkout {
+/* .checkout {
   width: 85vw;
   margin: auto;
-}
+} */
 
 .checkout .row {
   display: flex;
@@ -1646,6 +1656,19 @@ footer .bottom-footer {
 /* all -----------------------------------------------*/
 .img {
   height: 20rem;
+}
+
+.box-container {
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  align-items: center; */
+  width: 85vw;
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: space-between;
 }
 
 /* -------------------------------------media screen--------------------------------------- */
