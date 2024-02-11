@@ -70,7 +70,7 @@ if (isset($_POST['logout'])) {
                     <img src="data:image;base64,<?php echo base64_encode($fetch_product['image']); ?>" alt="" class="img">
                     <div class="row">
                       <h3 class="name"><?= $fetch_product['name']; ?></h3>
-                      <p class="price">Price : $<?= $fetch_order['price']; ?> X <?= $fetch_order['qty']; ?></p>
+                      <p class="price">&#x20B9;<?= $fetch_order['price']; ?> X <?= $fetch_order['qty']; ?></p>
                       <p class="status" style="color:<?php if ($fetch_order['status'] == 'delivered') {
                                                         echo 'green';
                                                       } else if ($fetch_order['status'] == 'canceled') {

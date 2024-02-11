@@ -39,6 +39,7 @@ body {
 }
 a {
   text-decoration: none;
+  color: white;
 }
 
 li {
@@ -63,9 +64,9 @@ button {
   background-color: rgba(255, 255, 255, 0);
   padding: 5px 35px;
   display: inline-block;
-  border: 2px solid #feb101;
-  border-radius: 50px;
-  color: #feb101;
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius-sm);
+  color: var(--primary-color);
   text-transform: capitalize;
   font-size: 16px;
   user-select: none;
@@ -85,6 +86,9 @@ button {
   width: 0;
   z-index: -1;
   transition: width 0.3s ease;
+}
+.btn:hover {
+  color: white;
 }
 .btn:hover::before {
   width: 100%;
@@ -550,9 +554,8 @@ nav.flex {
   background-color: rgba(255, 255, 255, 0);
   padding: 5px 35px;
   display: inline-block;
-  border: 2px solid #feb101;
+  border: 2px solid var(--white-color);
   border-radius: 50px;
-  color: #000000c5;
   text-transform: capitalize;
   font-size: 16px;
   user-select: none;
@@ -565,14 +568,14 @@ nav.flex {
 .slide-detail h4 a {
   position: relative;
   text-decoration: none;
-  color: #feb101;
+  color: white;
   z-index: 5;
 }
 
 .slide-detail h4::after {
   content: "";
   position: absolute;
-  background-color: #feb101;
+  background-color: #000;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -586,7 +589,7 @@ nav.flex {
   border-radius: 0;
 }
 .slide-detail h4:hover a {
-  color: #dadada;
+  color: var(--white-color);
 }
 
 /* .slide1 {
@@ -689,12 +692,11 @@ nav.flex {
 
 .AdBtn {
   line-height: 2;
-  background-color: white;
+  background-color: var(--primary-color);
   padding: 5px 35px;
   display: inline-block;
-  border: 2px solid #feb101;
-  border-radius: 50px;
-  color: #000000c5;
+  border: none;
+  border-radius: var(--border-radius-sm);
   text-transform: capitalize;
   font-size: 16px;
   user-select: none;
@@ -704,32 +706,8 @@ nav.flex {
   transition: all ease 0.4s;
   z-index: 2;
 }
-
 .AdBtn a {
-  position: relative;
-  text-decoration: none;
-  color: #feb101;
-  z-index: 5;
-}
-
-.AdBtn::after {
-  content: "";
-  position: absolute;
-  background-color: #feb101;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -100%;
-  transition: all ease 0.4s;
-  border-radius: 100%;
-}
-.AdBtn:hover::after {
-  bottom: 0;
-  border-radius: 0;
-}
-.AdBtn:hover a {
-  color: #ffffff;
+  color: white;
 }
 
 /* -----------------thumb section------------------- */
@@ -778,8 +756,11 @@ nav.flex {
 
 /* -------------------------------container------------------------ */
 .container {
-  background-color: aquamarine;
+  display: flex;
+  height: 15rem;
+  background-color: #12b6b5;
   border-radius: var(--border-radius-sm);
+  align-items: center;
 }
 .container .box {
   text-align: center;
@@ -787,20 +768,28 @@ nav.flex {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: #fff;
+}
+
+.container .box-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
 }
 
 .container .box span {
-  color: var(--primary-color);
-  font-size: 2rem;
+  color: #fff;
+  font-size: 1.7rem;
   margin: 1rem 0;
   text-transform: capitalize;
   font-style: italic;
   font-weight: bold;
 }
 .container .box h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
+
 .container .box-left img {
   height: 14rem;
 }
@@ -821,10 +810,30 @@ nav.flex {
   padding: 2rem 1rem;
 }
 .shop .row {
-  margin: 2rem auto;
+  height: 25rem;
+  width: 90vw;
+  margin: 3rem auto;
   display: flex;
   justify-content: space-evenly;
+  color: #000;
 }
+
+.shop > .row > a > img {
+  height: 25rem;
+  border-radius: var(--border-radius-sm);
+}
+.shop > .row > a > .detail {
+  background-color: #0000009c;
+  position: relative;
+  bottom: 10rem;
+  left: 1rem;
+  width: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .shop .row .top-footer {
   margin-top: 2rem;
   text-align: center !important;
@@ -890,7 +899,7 @@ nav.flex {
   color: white;
 }
 
-.shop-category > .flex > .box:nth-child(2) > .detail a {
+.shop-category > .flex > .box > .detail a {
   margin-top: 2.1rem;
 }
 
@@ -1146,7 +1155,7 @@ textarea {
 .top-footer {
   width: 100%;
   background: var(--primary-color);
-  padding: 1rem;
+  padding: 1rem 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1159,6 +1168,20 @@ textarea {
 .top-footer input {
   width: 40vw;
 }
+
+.input-field {
+  background-color: white;
+  width: 45rem;
+  margin: 0px 32px;
+  padding: 0 7px;
+  border-radius: 4px;
+}
+.input-field input {
+  border: none;
+  max-width: 34rem;
+  box-shadow: none;
+}
+
 footer {
   /* background-image: url(./img/0.webp); */
   background-color: var(--secondry-color);
@@ -1253,17 +1276,27 @@ footer .bottom-footer {
 
 /* ---------------------------------------view products section-------------------------------------- */
 
+.products {
+  margin: 2rem 0;
+}
+
+.products .detail {
+  padding: 5px 10px;
+}
+
 .products .box-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  justify-content: center;
+  display: flex;
+  /* grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); */
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .products .box-container .box {
   box-shadow: var(--box-shadow);
   border-radius: 0.5rem;
-  padding: 2rem 1rem;
   margin: 1rem;
   position: relative;
+  min-width: 10rem;
+  width: 20rem;
 }
 .products .box-container .box .img {
   /* width: 60%; */
@@ -1275,31 +1308,45 @@ footer .bottom-footer {
   text-transform: capitalize;
 }
 .products .box-container .box .button {
-  text-align: center;
+  display: flex;
   align-items: center;
   position: absolute;
   bottom: 30%;
-  right: 7%;
+  right: 2%;
   border-radius: 20px;
-  background: var(--secondry-color);
-  padding: 0.5rem 1.5rem;
+  background: rgba(0, 0, 0, 0.151);
+  padding: 0 0.3rem;
+  backdrop-filter: blur(10px);
 }
 .products .box-container .box .button i,
 .products .box-container .box .button a {
   font-size: 1.3rem;
   font-weight: bold;
-  margin-right: 0.5rem;
+  margin: 2px 3px;
+  color: #000000ab;
+}
+.products .box-container .box .button i:hover,
+.products .box-container .box .button a:hover {
   color: #000;
 }
+
+.str {
+  color: #292929;
+  font-size: 14px;
+}
+.fd {
+  font-size: 14px;
+}
+
 .products .box-container .box .flex {
   padding-bottom: 1rem;
   display: flex;
   margin-right: auto;
 }
-.products .box-container .box .price {
-  font-size: 16px;
-  color: var(--primary-color);
-  margin-right: auto;
+.box-container .box .price {
+  font-size: 19px;
+  color: rgb(17, 17, 17);
+  margin: 15px auto 0 0;
 }
 .products .box-container .box .btn {
   position: absolute;
@@ -1514,10 +1561,7 @@ footer .bottom-footer {
 
 /* ---------------------------------------view products/order------------------------ */
 .orders .box-container {
-  padding: 2% 6%;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  align-items: flex-start;
-  justify-content: center;
+  padding: 2% 4%;
   gap: 1.5rem;
 }
 .orders .box-container .box {
@@ -1525,14 +1569,17 @@ footer .bottom-footer {
   border-radius: 0.5rem;
   position: relative;
   overflow-x: hidden;
+  margin: 1rem;
+  min-width: 10rem;
+  width: 18rem;
 }
 .orders .box-container .box a {
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 .orders .box-container .box a .row {
-  position: absolute;
-  right: 1%;
+  margin: 15px auto 5px 15px;
 }
 .orders .box-container .box .date {
   position: absolute;
@@ -1546,21 +1593,19 @@ footer .bottom-footer {
   border-radius: 0.5rem;
 }
 .orders .box-container .box .img {
-  width: 100%;
   object-fit: contain;
-  margin-left: -4rem;
+  height: 18rem;
 }
 .orders .box-container .box .name {
-  font-size: 1rem;
   text-transform: capitalize;
   text-overflow: ellipsis;
   overflow-x: hidden;
   color: #000;
 }
-.orders .box-container .box .price {
+/* .orders .box-container .box .price {
   color: orange;
   font-size: 1rem;
-}
+} */
 .orders .box-container .box .status {
   margin-left: 0.5rem;
   font-size: 1rem;

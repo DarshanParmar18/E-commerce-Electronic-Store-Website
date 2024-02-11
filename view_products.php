@@ -109,23 +109,35 @@ if (isset($_POST['add_to_cart'])) {
                     while ($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)) {
                 ?>
                         <form action="" method="post" class="box">
-                            <!-- <?php echo '<img src="data:image;base64,' . base64_encode($fetch_products['image']) . '" alt="" class="img">' ?> -->
+                            <a href="checkout.php?get_id=<?= $fetch_products['id']; ?>">
+                                <!-- <?php echo '<img src="data:image;base64,' . base64_encode($fetch_products['image']) . '" alt="" class="img">' ?> -->
 
-                            <!-- the correct way -->
-                            <img src="data:image;base64,<?php echo base64_encode($fetch_products['image']); ?>" alt="" class="img">
+                                <!-- the correct way -->
+                                <img src="data:image;base64,<?php echo base64_encode($fetch_products['image']); ?>" alt="" class="img">
 
-                            <div class=" button">
-                                <button type="submit" name="add_to_cart"><i class="bx bx-cart"></i></button>
-                                <button type="submit" name="add_to_wishlist"><i class="bx bx-heart"></i></button>
-                                <a href="view_page.php?pid=<?php echo $fetch_products['id']; ?>" class="bx bxs-show"></a>
-                            </div>
-                            <h3 class="name"><?= $fetch_products['name']; ?></h3>
-                            <input type="hidden" name="product_id" value="<?= $fetch_products['id']; ?>">
-                            <div class="flex">
-                                <p class="price">price $<?= $fetch_products['price']; ?>/-</p>
-                                <input type="number" name="qty" value="1" required min="1" max="99" maxlength="2" class="qty">
-                            </div>
-                            <a href="checkout.php?get_id=<?= $fetch_products['id']; ?>" class="btn">Buy now</a>
+                                <div class=" button">
+                                    <button type="submit" name="add_to_cart"><i class="bx bx-cart"></i></button>
+                                    <button type="submit" name="add_to_wishlist"><i class="bx bx-heart"></i></button>
+                                    <a href="view_page.php?pid=<?php echo $fetch_products['id']; ?>" class="bx bxs-show"></a>
+                                </div>
+                                <div class="detail">
+                                    <h4 class="name"><?= $fetch_products['name']; ?></h4>
+                                    <i class="str bx bxs-star"></i>
+                                    <i class="str bx bxs-star"></i>
+                                    <i class="str bx bxs-star"></i>
+                                    <i class="str bx bxs-star"></i>
+                                    <i class="str bx bxs-star-half"></i>
+                                    <span class="str">4312</span>
+                                    <input type="hidden" name="product_id" value="<?= $fetch_products['id']; ?>">
+                                    <div class="flex">
+                                        <p class="price"> <sup>₹</sup><?= $fetch_products['price']; ?>/- <span style="font-size: 14px;">M.R.P: ₹<strike>12000</strike>(22% off)</span></p>
+                                        <!-- <input type="number" name="qty" value="1" required min="1" max="99" maxlength="2" class="qty"> -->
+                                    </div>
+                                    <p class="fd"><b>Free</b> delivery by <i>GE</i></p>
+                                </div>
+
+                            </a>
+
                         </form>
                 <?php
                     }
