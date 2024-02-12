@@ -385,7 +385,7 @@ nav.flex {
 
 .logout-btn {
   background: var(--black-color);
-  color: var(--white-color);
+  color: white;
   text-transform: uppercase;
   width: 11rem;
   border-radius: var(--border-radius-sm);
