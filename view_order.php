@@ -52,7 +52,7 @@ if (isset($_POST['cancel'])) {
       <h1>Order</h1>
     </div>
     <div class="title2">
-      <a href="./home.php"><span>Orders details</span></a>
+      <a href="./index.php"><span>Orders details</span></a>
     </div>
 
     <section class="order-detail">

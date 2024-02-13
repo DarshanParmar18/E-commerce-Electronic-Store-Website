@@ -1,6 +1,13 @@
 "use strict";
 
 const header = document.querySelector(".header");
+// -----------------------------------------------------------------------------------
+const fixedNavbar = () => {
+  header.classList.toggle("scrolled", window.pageYOffset > 0);
+};
+
+fixedNavbar();
+window.addEventListener("scroll", fixedNavbar);
 // -------------------home slider-----------------
 const leftArrow = document.querySelector(".left-arrow .bxs-left-arrow");
 const rightArrow = document.querySelector(".right-arrow .bxs-right-arrow");
@@ -9,14 +16,6 @@ const slider = document.querySelector(".slider");
 // ---------------testimonial slider----------------
 const slides = document.querySelectorAll(".testimonial-item");
 let index = 0;
-
-// -----------------------------------------------------------------------------------
-const fixedNavbar = () => {
-  header.classList.toggle("scrolled", window.pageYOffset > 0);
-};
-
-fixedNavbar();
-window.addEventListener("scroll", fixedNavbar);
 
 let menu = document.querySelector("#menu-btn");
 let userBtn = document.querySelector("#user-btn");

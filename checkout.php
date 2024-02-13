@@ -120,7 +120,7 @@ if (isset($_POST["place_order"])) {
       <h1>Checkout Summary</h1>
     </div>
     <div class="title2">
-      <a href="./home.php"><span>/ Checkout Summary</span></a>
+      <a href="./index.php"><span>/ Checkout Summary</span></a>
     </div>
 
     <section class="checkout align">

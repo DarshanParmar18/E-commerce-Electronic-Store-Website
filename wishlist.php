@@ -90,7 +90,7 @@ if (isset($_POST['delete_item'])) {
       <h1>Wishlist</h1>
     </div>
     <div class="title2">
-      <a href="./home.php"><span>Wishlist</span></a>
+      <a href="./index.php"><span>Wishlist</span></a>
     </div>
 
     <section class="products">

@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
         $_SESSION["user_id"] = $row["id"];
         $_SESSION["user_name"] = $row["name"];
         $_SESSION["user_email"] = $row["email"];
-        header("location: home.php");
+        header("location: index.php");
     } else {
         $message[] = "incorrect username and password";
         echo 'incorrect username and password';

@@ -41,7 +41,7 @@ if (isset($_POST['logout'])) {
       <h1>Order</h1>
     </div>
     <div class="title2">
-      <a href="./home.php"><span>Our Order</span></a>
+      <a href="./index.php"><span>Our Order</span></a>
     </div>
 
     <section class="orders">

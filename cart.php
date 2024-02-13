@@ -88,7 +88,7 @@ if (isset($_POST["empty_cart"])) {
       <h1>Cart</h1>
     </div>
     <div class="title2">
-      <a href="./home.php"><span>Cart</span></a>
+      <a href="./index.php"><span>Cart</span></a>
     </div>
 
     <section class="products">

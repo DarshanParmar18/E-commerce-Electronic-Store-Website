@@ -38,7 +38,7 @@ if (isset($_POST['logout'])) {
             <h1>About us</h1>
         </div>
         <div class="title2">
-            <a href="./home.php"><span>About</span></a>
+            <a href="./index.php"><span>About</span></a>
         </div>
         <div class="about-category">
             <div class="box">
