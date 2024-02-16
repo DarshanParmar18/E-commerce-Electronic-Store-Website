@@ -1,9 +1,9 @@
 <header class='header'>
     <nav class="flex">
-        <a href="index.php" class="logo"><img src="./img/logo.jpg" alt="Logo"></a>
+        <a href="index.php" class="logo"><img src="/img/electronicImgs/Samsung-logo.webp" alt="Logo"></a>
         <div class="navbar">
             <a href="index.php">Home</a>
-            <a href="view_products.php">Products</a>
+            <a href="view_products.php?category">Products</a>
             <a href="order.php">Orders</a>
             <a href="about.php">About us</a>
             <a href="contact.php">Contact us</a>

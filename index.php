@@ -30,7 +30,7 @@ if (isset($_POST['logout'])) {
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
   <!-- ------------------------------CSS------------------------ -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- <link rel="stylesheet" href="style.css" /> -->
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
 
   <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -68,9 +68,14 @@ if (isset($_POST['logout'])) {
           <div class="slider-cover">
             <img src="/img/electronicImgs/apple watch large.jpg" alt="">
             <div class="slide-detail">
-              <h1>Welcome to my shop</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <h4><a href="view_products.php">Shop now</a></h4>
+              <span><img src="./img/electronicImgs/apple.png" alt=""></span>
+              <h1>WATCH</h1>
+              <h3>SERIES 9</h3>
+              <h1>Smarter. Brighter.</h1>
+              <h1>
+                Mightier.
+              </h1>
+              <a href="view_products.php?category=watch">Shop now &gt;</a>
             </div>
           </div>
           <div class="hero-dec-top"></div>
@@ -131,7 +136,9 @@ if (isset($_POST['logout'])) {
             <p>Many variations of passages of Lorem ipsum available, but majority have suffered alteration in some form, by injected.</p>
           </div>
         </div>
-        <button class="Adbtn"><a href="view_products.php">Shop now</button>
+        <a href="view_products.php?category=homeAppliances">
+          <button class="Adbtn">Shop now</button>
+        </a>
       </div>
     </section>
 
@@ -196,26 +203,29 @@ if (isset($_POST['logout'])) {
       </div>
     </section> -->
 
+    <!-- Watch Banner -->
     <section class='container align'>
-      <div class="box-container">
-        <div class="box box-left">
-          <img src="./img/electronicImgs/AdWatch1.png" alt="">
+      <a href="view_products.php?category=watch">
+        <div class="box-container">
+          <div class="box box-left">
+            <img src="./img/electronicImgs/AdWatch1.png" alt="">
+          </div>
+          <div class="box box-mid">
+            <span>BEST DIGITAL</span>
+            <h1>SALE SMARTWATCH</h1>
+            <h3><i>&#x20B9;999/-</i> OFF
+            </h3>
+          </div>
+          <div class="box box-right">
+            <img src="./img/electronicImgs/AdWatch.png" alt="">
+          </div>
         </div>
-        <div class="box box-mid">
-          <span>BEST DIGITAL</span>
-          <h1>SALE SMARTWATCH</h1>
-          <h3><i>&#x20B9;999/-</i> OFF
-          </h3>
-        </div>
-        <div class="box box-right">
-          <img src="./img/electronicImgs/AdWatch.png" alt="">
-        </div>
-      </div>
+      </a>
     </section>
 
+    <!-- Trending Products -->
     <section class="shop">
       <div class="title">
-        <img src="./img/download.png" alt="">
         <h1>Trending Products</h1>
       </div>
       <div class="row">
@@ -235,32 +245,83 @@ if (isset($_POST['logout'])) {
       </div>
       <div class="box-container">
         <div class="box">
-          <a href="">
+          <a href="view_products.php?category=watch">
             <img src="./img/electronicImgs/apple watch1.jpg" alt="">
-            <h2>Apple Watch SE</h2>
-            <p>From <b>$249</b></p>
-            <!-- <a href="view_products.php" class='btn'>Shop now</a> -->
+            <div class="product-detail">
+              <h3>Apple Watch SE</h3>
+              <p>From <b>$249</b></p>
+            </div>
           </a>
         </div>
         <div class="box">
-          <img src="./img/electronicImgs/apple watch2.jpg" alt="">
-          <a href="view_products.php" class=' btn'>Shop now</a>
+          <a href="view_products.php?category=laptop">
+            <img src="./img/electronicImgs/apple watch2.jpg" alt="">
+            <div class="product-detail">
+              <h3>Apple Watch Series 9</h3>
+              <p>From <b>$399</b></p>
+              <!-- <a href="view_products.php" class='btn'>Shop now</a> -->
+            </div>
+          </a>
         </div>
         <div class="box">
-          <img src="./img/electronicImgs/apple watch3.jpg" alt="">
-          <a href="view_products.php" class='btn'>Shop now</a>
+          <a href="view_products.php?category=watch">
+            <img src="./img/electronicImgs/apple watch3.jpg" alt="">
+            <div class="product-detail">
+              <h3>Apple Watch Ultra 2</h3>
+              <p>From <b>$249</b></p>
+              <!-- <a href="view_products.php" class='btn'>Shop now</a> -->
+            </div>
+          </a>
         </div>
         <div class="box">
-          <img src="./img/card2.jpg" alt="">
-          <a href="view_products.php" class=' btn'>Shop now</a>
+          <a href="view_products.php?category=mobile">
+            <img src="./img/electronicImgs/Galaxy-S23-Ultra.webp" alt="">
+            <div class="product-detail">
+              <h3>Galaxy-S23-Ultra</h3>
+              <p>From <b>$349</b></p>
+              <!-- <a href="view_products.php" class='btn'>Shop now</a> -->
+            </div>
+          </a>
         </div>
         <div class="box">
-          <img src="./img/10.jpg" alt="">
-          <a href="view_products.php" class='btn'>Shop now</a>
+          <a href="view_products.php?category=mobile">
+            <img src="./img/electronicImgs/galaxy-s24.avif" alt="">
+            <div class="product-detail">
+              <h3>Galaxy-S23-Ultra</h3>
+              <p>From <b>$349</b></p>
+              <!-- <a href="view_products.php" class='btn'>Shop now</a> -->
+            </div>
+          </a>
         </div>
         <div class="box">
-          <img src="./img/6.webp" alt="">
-          <a href="view_products.php" class=' btn'>Shop now</a>
+          <a href="view_products.php?category=homeAppliances">
+            <img src="./img/electronicImgs/washing machine2.png" alt="">
+            <div class="product-detail">
+              <h3>Galaxy-S23-Ultra</h3>
+              <p>From <b>$349</b></p>
+              <!-- <a href="view_products.php" class='btn'>Shop now</a> -->
+            </div>
+          </a>
+        </div>
+        <div class="box">
+          <a href="view_products.php?category=homeAppliances">
+            <img src="./img/electronicImgs/refrigerator.png" alt="">
+            <div class="product-detail">
+              <h3>Galaxy-S23-Ultra</h3>
+              <p>From <b>$349</b></p>
+              <!-- <a href="view_products.php" class='btn'>Shop now</a> -->
+            </div>
+          </a>
+        </div>
+        <div class="box">
+          <a href="view_products.php?category=games">
+            <img src="./img/electronicImgs/PlayStationPng.png" alt="">
+            <div class="product-detail">
+              <h3>Galaxy-S23-Ultra</h3>
+              <p>From <b>$349</b></p>
+              <!-- <a href="view_products.php" class='btn'>Shop now</a> -->
+            </div>
+          </a>
         </div>
       </div>
     </section>

@@ -23,15 +23,15 @@ if (isset($_POST['add_to_wishlist'])) {
     $cart_num->execute([$user_id, $product_id]);
 
     if ($varify_wishlist->rowCount() > 0) {
-        $warning_msg[] = 'Products already exist in your wishlist';
+        $warning_msg[] = 'Product already exists in your wishlist';
     } else if ($cart_num->rowCount() > 0) {
-        $warning_msg[] = 'Product already exist in your cart';
+        $warning_msg[] = 'Product already exists in your cart';
     } else {
         $select_price = $conn->prepare("SELECT * FROM `products` WHERE id = ? LIMIT 1");
         $select_price->execute([$product_id]);
         $fetch_price = $select_price->fetch(PDO::FETCH_ASSOC);
 
-        $insert_wishlist = $conn->prepare("INSERT INTO `wishlist` (id, user_id, product_id,price) VALUES(?,?,?,?)");
+        $insert_wishlist = $conn->prepare("INSERT INTO `wishlist` (id, user_id, product_id, price) VALUES(?,?,?,?)");
         $insert_wishlist->execute([$id, $user_id, $product_id, $fetch_price['price']]);
         $success_msg[] = 'Product added to wishlist successfully';
     }
@@ -41,9 +41,7 @@ if (isset($_POST['add_to_wishlist'])) {
 if (isset($_POST['add_to_cart'])) {
     $id = unique_id();
     $product_id = $_POST['product_id'];
-
     $qty = $_POST['qty'];
-    $qty = strip_tags($qty);
 
     $varify_cart = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ? AND product_id = ?");
     $varify_cart->execute([$user_id, $product_id]);
@@ -52,7 +50,7 @@ if (isset($_POST['add_to_cart'])) {
     $max_cart_items->execute([$user_id]);
 
     if ($varify_cart->rowCount() > 0) {
-        $warning_msg[] = 'Products already exist in your cart';
+        $warning_msg[] = 'Product already exists in your cart';
     } else if ($max_cart_items->rowCount() > 20) {
         $warning_msg[] = 'Cart is full!';
     } else {
@@ -60,14 +58,13 @@ if (isset($_POST['add_to_cart'])) {
         $select_price->execute([$product_id]);
         $fetch_price = $select_price->fetch(PDO::FETCH_ASSOC);
 
-        $insert_cart = $conn->prepare("INSERT INTO `cart`(id, user_id, product_id,price, qty) VALUES(?,?,?,?,?)");
+        $insert_cart = $conn->prepare("INSERT INTO `cart` (id, user_id, product_id, price, qty) VALUES(?,?,?,?,?)");
         $insert_cart->execute([$id, $user_id, $product_id, $fetch_price['price'], $qty]);
         $success_msg[] = 'Product added to cart successfully';
     }
 }
-
-
 ?>
+
 <style type='text/css'>
     <?php include 'style.css'; ?>
 </style>
@@ -103,18 +100,17 @@ if (isset($_POST['add_to_cart'])) {
         <section class="products">
             <div class="box-container">
                 <?php
-                $select_products = $conn->prepare('SELECT * FROM `products`');
-                $select_products->execute();
+
+                $category = $_GET['category'];
+                $select_products = $conn->prepare("SELECT * FROM `products` WHERE category LIKE ?");
+                $select_products->execute(["%$category%"]);
                 if ($select_products->rowCount() > 0) {
                     while ($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)) {
                 ?>
                         <form action="" method="post" class="box">
                             <a href="checkout.php?get_id=<?= $fetch_products['id']; ?>">
-                                <!-- <?php echo '<img src="data:image;base64,' . base64_encode($fetch_products['image']) . '" alt="" class="img">' ?> -->
-
                                 <!-- the correct way -->
                                 <img src="data:image;base64,<?php echo base64_encode($fetch_products['image']); ?>" alt="" class="img">
-
                                 <div class=" button">
                                     <button type="submit" name="add_to_cart"><i class="bx bx-cart"></i></button>
                                     <button type="submit" name="add_to_wishlist"><i class="bx bx-heart"></i></button>
@@ -131,7 +127,7 @@ if (isset($_POST['add_to_cart'])) {
                                     <input type="hidden" name="product_id" value="<?= $fetch_products['id']; ?>">
                                     <div class="flex">
                                         <p class="price"> <sup>₹</sup><?= $fetch_products['price']; ?>/- <span style="font-size: 14px;">M.R.P: ₹<strike>12000</strike>(22% off)</span></p>
-                                        <!-- <input type="number" name="qty" value="1" required min="1" max="99" maxlength="2" class="qty"> -->
+                                        <input type="number" name="qty" value="1" required min="1" max="99" maxlength="2" class="qty">
                                     </div>
                                     <p class="fd"><b>Free</b> delivery by <i>GE</i></p>
                                 </div>
