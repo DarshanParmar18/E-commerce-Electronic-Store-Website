@@ -10,7 +10,7 @@
     <!-- <div class="overlay"></div> -->
     <div class="footer-content">
         <div class="img-box">
-            <img src="/img/logo.jpg" alt="logo2">
+            <img src="./img/electronicImgs/Samsung-logo.webp" alt="logo2">
         </div>
         <div class="inner-footer">
             <div class="card">

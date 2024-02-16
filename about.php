@@ -42,7 +42,7 @@ if (isset($_POST['logout'])) {
         </div>
         <div class="about-category">
             <div class="box">
-                <img src="./img/3.webp" alt="">
+                <img src="" alt="">
                 <div class="detail">
                     <span>coffee</span>
                     <h1>lemon green</h1>
@@ -50,7 +50,7 @@ if (isset($_POST['logout'])) {
                 </div>
             </div>
             <div class="box">
-                <img src="./img/about.png" alt="">
+                <img src="" alt="">
                 <div class="detail">
                     <span>coffee</span>
                     <h1>lemon green</h1>
@@ -58,7 +58,7 @@ if (isset($_POST['logout'])) {
                 </div>
             </div>
             <div class="box">
-                <img src="./img/1.webp" alt="">
+                <img src="" alt="">
                 <div class="detail">
                     <span>coffee</span>
                     <h1>lemon green</h1>
@@ -66,7 +66,7 @@ if (isset($_POST['logout'])) {
                 </div>
             </div>
             <div class="box">
-                <img src="./img/1.webp" alt="">
+                <img src="" alt="">
                 <div class="detail">
                     <span>coffee</span>
                     <h1>lemon green</h1>
@@ -77,7 +77,7 @@ if (isset($_POST['logout'])) {
 
         <section class="services">
             <div class="title">
-                <img src="./img/download.png" alt="" class="logo">
+                <img src="" alt="" class="logo">
                 <h1>Why Choose us</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore a quos recusandae soluta consequatur cum.</p>
             </div>
@@ -133,7 +133,7 @@ if (isset($_POST['logout'])) {
 
         <div class="testimonial-container">
             <div class="title">
-                <img src="./img/download.png" alt="" class="logo">
+                <img src="." alt="" class="logo">
                 <h1>What people say about us</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci?</p>
             </div>

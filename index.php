@@ -239,7 +239,7 @@ if (isset($_POST['logout'])) {
         <div class="row-detail">
           <img src="./img/electronicImgs/Noise.jpg" alt="">
           <div class="top-footer">
-            <h1>A cup of green tea makes you slim</h1>
+            <h1>Lorem ipsum dolor sit amet adipisicing.</h1>
           </div>
         </div>
       </div>

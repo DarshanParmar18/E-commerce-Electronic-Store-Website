@@ -55,7 +55,6 @@ if (isset($_POST['submit'])) {
     <div class="main-container">
         <div class="form-container">
             <div class="title">
-                <img src="./img/download.png" alt="">
                 <h1>Login Now</h1>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus placeat ipsa in, sit impedit est!
                 </p>

@@ -43,7 +43,6 @@ if (isset($_POST['logout'])) {
 
         <section class="services">
             <div class="title">
-                <img src="./img/download.png" alt="" class="logo">
                 <h1>Why Choose us</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore a quos recusandae soluta consequatur cum.</p>
             </div>
@@ -83,7 +82,6 @@ if (isset($_POST['logout'])) {
             <form method="post" action="">
                 <div class="post">
                     <div class="title">
-                        <img src="./img/download.png" class="logo" alt="">
                         <h1>Leave a message</h1>
                     </div>
                     <div class="input-field">
@@ -108,7 +106,6 @@ if (isset($_POST['logout'])) {
         </div>
         <div class="address">
             <div class="title">
-                <img src="./img/download.png" class="logo" alt="">
                 <h1>Contact details</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
             </div>
