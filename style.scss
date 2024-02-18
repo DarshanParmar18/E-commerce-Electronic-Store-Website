@@ -1,0 +1,49 @@
+:root {
+  --primary-color: #829b85;
+  --secondry-color: #e7f1e8;
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.171);
+
+  /* border-radius */
+  --border-radius-md: 10px;
+  --border-radius-sm: 5px;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------admin------------------------------------------- */
+/* ------------------------------------------------------------------------------------------ */
+
+.dashboard {
+  // margin-top: 5rem;
+  background-color: #f5f5fa;
+  height: 100vh;
+
+  h1 {
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 2.5rem;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+
+    &::after {
+      content: "";
+      display: flex;
+      height: 3px;
+      width: 11rem;
+      background-color: var(--primary-color);
+      margin: auto;
+    }
+  }
+
+  .box-container {
+    // justify-content: normal;
+    .box {
+      width: 22rem;
+      // border: 2px solid var(--primary-color);
+      box-shadow: var(--box-shadow);
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 2rem;
+      margin: 1rem;
+    }
+  }
+}
