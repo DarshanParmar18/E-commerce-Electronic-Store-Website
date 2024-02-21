@@ -43,6 +43,7 @@ if (!isset($admin_id)) {
         <a href="update_profile.php" class="btn">update profile</a>
       </div> -->
 
+      <!-- Total Sales -->
       <div class="box">
         <?php
         $total_sales = 0;
@@ -58,9 +59,11 @@ if (!isset($admin_id)) {
         ?>
         <p>total Sales</p>
         <h3><span>$</span><?= $total_sales; ?><span>/-</span></h3>
-        <a href="placed_orders.php" class="btn">see orders</a>
+        <a href="placed_orders.php?status" class="btn">see orders</a>
       </div>
 
+
+      <!-- pendings -->
       <div class="box">
         <?php
         $total_pendings = 0;
@@ -76,9 +79,9 @@ if (!isset($admin_id)) {
         ?>
         <p>total pendings</p>
         <h3><?= $total_pendings; ?></h3>
-        <a href="placed_orders.php" class="btn">see orders</a>
+        <a href="placed_orders.php?status=pending" class="btn">see orders</a>
       </div>
-
+      <!-- completed orders -->
       <div class="box">
         <?php
         $total_completes = 0;
@@ -93,47 +96,54 @@ if (!isset($admin_id)) {
         ?>
         <p>completed orders</p>
         <h3><?= $total_completes; ?></h3>
-        <a href="placed_orders.php" class="btn">see orders</a>
+        <a href="placed_orders.php?status=delivered" class="btn">see orders</a>
       </div>
 
+
+      <!-- Placed orders -->
       <div class="box">
         <?php
         $select_orders = $conn->prepare("SELECT * FROM `orders`");
         $select_orders->execute();
-        $number_of_orders = $select_orders->rowCount()
+        $number_of_orders = $select_orders->rowCount();
         ?>
         <p>orders placed</p>
         <h3><?= $number_of_orders; ?></h3>
-        <a href="placed_orders.php" class="btn">see orders</a>
+        <a href="placed_orders.php?status" class="btn">see orders</a>
       </div>
 
+
+      <!-- added product -->
       <div class="box">
         <?php
         $select_products = $conn->prepare("SELECT * FROM `products`");
         $select_products->execute();
-        $number_of_products = $select_products->rowCount()
+        $number_of_products = $select_products->rowCount();
         ?>
         <p>products added</p>
         <h3><?= $number_of_products; ?></h3>
-        <a href="products.php" class="btn">see products</a>
+        <a href="admin_products.php" class="btn">see products</a>
       </div>
 
+      <!-- Users -->
       <div class="box">
         <?php
         $select_users = $conn->prepare("SELECT * FROM `users`");
         $select_users->execute();
-        $number_of_users = $select_users->rowCount()
+        $number_of_users = $select_users->rowCount();
         ?>
         <p>Users</p>
         <h3><?= $number_of_users; ?></h3>
-        <a href="users_accounts.php" class="btn">see users</a>
+        <a href="user_account.php" class="btn">see users</a>
       </div>
 
+
+      <!-- admin -->
       <div class="box">
         <?php
         $select_admins = $conn->prepare("SELECT * FROM `admin`");
         $select_admins->execute();
-        $number_of_admins = $select_admins->rowCount()
+        $number_of_admins = $select_admins->rowCount();
         ?>
         <p>admin users</p>
         <h3><?= $number_of_admins; ?></h3>

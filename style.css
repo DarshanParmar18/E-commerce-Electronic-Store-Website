@@ -52,6 +52,7 @@ button {
 
 .btn {
   line-height: 2;
+  box-shadow: var(--box-shadow);
   background-color: rgba(255, 255, 255, 0);
   padding: 5px 35px;
   display: inline-block;
@@ -2128,7 +2129,7 @@ footer .bottom-footer {
   align-items: center;
   flex-wrap: wrap;
   margin: auto;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 /* -------------------------------------media screen--------------------------------------- */

@@ -1,13 +1,13 @@
-<header class="header">
+<header class="header admin-header">
   <nav class="flex">
     <a href="./admin/admin_dashboard.php" class="logo">Admin<span>Panel</span></a>
     <div class="navbar">
       <a href="../admin/admin_dashboard.php">home</a>
-      <a href="../admin/products.php">products</a>
-      <a href="../admin/placed_orders.php">orders</a>
+      <a href="admin_products.php">products</a>
+      <a href="../admin/placed_orders.php?status">orders</a>
       <a href="../admin/admin_accounts.php">admins</a>
-      <a href="../admin/users_accounts.php">users</a>
-      <a href="../admin/messages.php">messages</a>
+      <a href="../admin/user_account.php">users</a>
+      <!-- <a href="../admin/messages.php">messages</a> -->
     </div>
 
     <div class="icons">
