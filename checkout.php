@@ -120,15 +120,10 @@ if (isset($_POST["place_order"])) {
       <h1>Checkout Summary</h1>
     </div>
     <div class="title2">
-      <a href="./index.php"><span>/ Checkout Summary</span></a>
+      <a href="./index.php"><span>Checkout Summary</span></a>
     </div>
 
     <section class="checkout align">
-      <div class="title">
-        <img src="./img/download.png" alt="logo" class="logo">
-        <h1>Checkout Summary</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id Lorem ipsum dolor sit amet.</p>
-      </div>
       <div class="row">
         <form action="" method="post">
           <h3>Billing details</h3>

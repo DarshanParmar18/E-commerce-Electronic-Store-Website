@@ -108,15 +108,16 @@ if (isset($_POST['add_to_cart'])) {
         $select_products->execute();
         if ($select_products->rowCount() > 0) {
           while ($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)) {
+            $dis_price = $fetch_products['price'] * (20 / 100);
       ?>
             <form action="" method="post">
               <img src="data:image;base64,<?php echo base64_encode($fetch_products['image']); ?>" alt="" class="img">
               <div class="detail">
-                <div class="price"><?php echo $fetch_products['price']; ?></div>
                 <div class="name"><?php echo $fetch_products['name']; ?></div>
+                <div class="price"> <sup>₹</sup><?php echo $fetch_products['price']; ?> <i><strike>₹<?php echo ($fetch_products['price'] + $dis_price); ?> </strike> </i> </div>
+
                 <div class="product-detail">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores dolorum quas optio ex facere repellat laudantium nemo quis expedita amet aperiam itaque cupiditate eius, cumque porro cum est perferendis excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quis et non, nostrum distinctio repellendus molestias, laboriosam veritatis, iusto inventore dolore! Suscipit optio ex numquam neque deserunt quidem eius totam.
+                  <p><?php echo $fetch_products['product_detail']; ?>
                   </p>
                 </div>
                 <input type="hidden" name="product_id" value="<?php echo $fetch_products['id']; ?>">

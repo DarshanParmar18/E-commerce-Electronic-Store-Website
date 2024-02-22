@@ -151,7 +151,7 @@ if (isset($_POST['logout'])) {
             <span>BIG OFFERS</span>
             <h1>Extra 15% off</h1>
             <p>On Canon</p>
-            <a href="view_products.php" class='btn'>
+            <a href="view_products.php?category=headphones" class='btn'>
               Shop now
             </a>
           </div>
@@ -162,7 +162,7 @@ if (isset($_POST['logout'])) {
             <span>Best Seller</span>
             <h1>Philips R37</h1>
             <h3><strike>&#8377;1999</strike></h3>
-            <a href="view_products.php" class='btn'>
+            <a href="" class='btn'>
               Shop now
             </a>
           </div>
@@ -229,7 +229,7 @@ if (isset($_POST['logout'])) {
         <h1>Trending Products</h1>
       </div>
       <div class="row">
-        <a href="view_products.php">
+        <a href="view_products.php?category=games">
           <img src="./img/electronicImgs/PS5.jpg" alt="">
           <div class="detail">
             <h1>New PS5</h1>
@@ -237,7 +237,9 @@ if (isset($_POST['logout'])) {
           </div>
         </a>
         <div class="row-detail">
-          <img src="./img/electronicImgs/Noise.jpg" alt="">
+          <a href="view_products.php?category=earphones">
+            <img src="./img/electronicImgs/Noise.jpg" alt="">
+          </a>
           <div class="top-footer">
             <h1>Lorem ipsum dolor sit amet adipisicing.</h1>
           </div>

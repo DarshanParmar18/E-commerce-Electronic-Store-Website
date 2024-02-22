@@ -131,7 +131,7 @@ input {
   height: 18px;
   line-height: 17px;
   text-align: center;
-  padding: 1px 8px;
+  padding: 1px 6px;
   font-size: 10px;
 }
 
@@ -1129,7 +1129,7 @@ nav.flex {
       flex-direction: column;
     }
 
-    .row-detail > img {
+    .row-detail img {
       width: 55rem;
       border-radius: var(--border-radius-sm);
     }
@@ -1238,6 +1238,10 @@ nav.flex {
 .services img {
   width: 5rem;
 }
+.services .box-container {
+  justify-content: space-between;
+}
+
 /* -------------------brands---------- */
 .brand {
   margin: 5rem auto;
@@ -1246,6 +1250,9 @@ nav.flex {
 
 .brand img {
   width: 8rem;
+}
+.brand .box-container {
+  justify-content: space-between;
 }
 .brand > .box-container > .box:nth-child(1) > img {
   height: 2rem;
@@ -1429,7 +1436,8 @@ textarea {
   text-transform: uppercase;
 }
 .form-container form button {
-  width: 85%;
+  width: 36.5vw;
+  margin: 1rem 1rem 0 2.3rem;
   border-radius: var(--border-radius-sm);
   outline: none;
 }
@@ -1491,15 +1499,14 @@ textarea {
 
 .input-field {
   background-color: white;
-  width: 45rem;
+  /* width: 45rem; */
   margin: 0px 32px;
   padding: 0 7px;
   border-radius: 4px;
 }
 .input-field input {
-  border: none;
-  max-width: 34rem;
-  box-shadow: none;
+  /* max-width: 34rem; */
+  /* box-shadow: none; */
 }
 
 footer {
@@ -1684,13 +1691,13 @@ footer .bottom-footer {
 
   .box-container {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     flex-wrap: wrap;
 
     .box {
       box-shadow: var(--box-shadow);
       border-radius: 0.5rem;
-      margin: 1rem;
+      margin: 1rem 2rem;
       position: relative;
       min-width: 10rem;
       width: 20rem;
@@ -1701,6 +1708,14 @@ footer .bottom-footer {
 
         .img {
           height: 20rem;
+        }
+      }
+      .img-container {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        img {
+          height: 15rem;
         }
       }
 
@@ -1745,31 +1760,30 @@ footer .bottom-footer {
         .fd {
           font-size: 14px;
         }
+      }
+      .flex {
+        padding-bottom: 1rem;
+        display: flex;
+        margin-right: auto;
 
-        .flex {
-          padding-bottom: 1rem;
-          display: flex;
-          margin-right: auto;
+        .price {
+          font-size: 19px;
+          color: rgb(17, 17, 17);
+          margin: 15px auto 0 0;
+        }
 
-          .price {
-            font-size: 19px;
-            color: rgb(17, 17, 17);
-            margin: 15px auto 0 0;
-          }
+        .btn {
+          position: absolute;
+          top: 5%;
+        }
 
-          .btn {
-            position: absolute;
-            top: 5%;
-          }
-
-          .qty {
-            border-radius: 0.5rem;
-            padding: 0.2rem 0.3rem 0.2rem 0.6rem;
-            margin: 2px;
-            width: 2.8rem;
-            font-size: 1rem;
-            color: #000;
-          }
+        .qty {
+          border-radius: 0.5rem;
+          padding: 0.2rem 0.3rem 0.2rem 0.6rem;
+          margin: 2px;
+          width: 2.8rem;
+          font-size: 1rem;
+          color: #000;
         }
       }
     }
@@ -1819,23 +1833,17 @@ footer .bottom-footer {
 
 /* --------------------------------------view page-------------------------------------- */
 .view_page {
-  padding: 5% 8%;
-  background-image: url("./img/bg.jpg");
+  width: 85vw;
+  margin: 2rem auto;
 }
 .view_page form {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(35px, 1fr));
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  justify-content: space-around;
   box-shadow: var(--box-shadow);
   background: #fff;
-  margin-left: 1rem;
+  border-radius: 20px;
   padding: 1.5rem;
-}
-.view_page form img {
-  width: -webkit-fill-available;
-  padding: 0.5rem;
-  box-shadow: var(--box-shadow);
+  position: relative;
 }
 .view_page form .name {
   font-size: 2rem;
@@ -1843,8 +1851,16 @@ footer .bottom-footer {
   color: var(--primary-color);
 }
 .view_page form .price {
-  font-size: 24px;
-  line-height: 1;
+  font-size: 30px;
+  line-height: 1.5;
+  color: black;
+  sup {
+    font-size: 16px;
+  }
+  strike {
+    font-size: 18px;
+    margin-left: 0.5rem;
+  }
 }
 .view_page form .detail {
   font-size: 16px;
@@ -1852,9 +1868,14 @@ footer .bottom-footer {
   line-height: 2;
   margin-bottom: 0.5rem;
 }
+
+.view_page .button {
+  position: absolute;
+  bottom: 20px;
+}
 .view_page .btn {
-  background: var(--secondry-color);
   cursor: pointer;
+  margin: 1rem 2rem 1rem 0;
 }
 .cart-total .button {
   display: flex;
@@ -1988,6 +2009,7 @@ footer .bottom-footer {
   margin: 1rem;
   min-width: 10rem;
   width: 18rem;
+  padding: 2rem 1rem;
 }
 .orders .box-container .box a {
   display: flex;
@@ -1996,6 +2018,7 @@ footer .bottom-footer {
 }
 .orders .box-container .box a .row {
   margin: 15px auto 5px 15px;
+  color: #000;
 }
 .orders .box-container .box .date {
   position: absolute;
@@ -2003,14 +2026,14 @@ footer .bottom-footer {
   left: 0;
   padding: 0.5rem 1.5rem;
   background: var(--secondry-color);
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   display: inline-block;
   margin-bottom: 1.5rem;
   border-radius: 0.5rem;
+  color: black;
 }
 .orders .box-container .box .img {
-  object-fit: contain;
-  height: 18rem;
+  height: 15rem;
 }
 .orders .box-container .box .name {
   text-transform: capitalize;

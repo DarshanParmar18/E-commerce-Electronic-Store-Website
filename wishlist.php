@@ -110,16 +110,18 @@ if (isset($_POST['delete_item'])) {
         ?>
               <form action="" method="post" class="box">
                 <input type="hidden" name="wishlist_id" value="<?= $fetch_wishlist['id']; ?>">
-                <img src="data:image;base64,<?php echo base64_encode($fetch_product['image']); ?>" alt="" class="img">
+                <div class="img-container">
+                  <img src="data:image;base64,<?php echo base64_encode($fetch_product['image']); ?>" alt="" class="img">
+                </div>
                 <div class="button">
                   <button type="submit" name="add_to_cart"><i class="bx bx-cart"></i></button>
                   <a href="view_page.php?pid=<?php echo $fetch_products['id']; ?>" class="bx bxs-show"></a>
                   <button type="submit" name="delete_item" onclick="return confirm('delete this item');">
                     <i class="bx bx-x"></i></button>
                 </div>
-                <h3 class="name"><?= $fetch_product['name']; ?></h3>
-                <input type="hidden" name="product_id" value="<?= $fetch_product['id']; ?>">
-                <div class="flex">
+                <div class="detail">
+                  <h3 class="name"><?= $fetch_product['name']; ?></h3>
+                  <input type="hidden" name="product_id" value="<?= $fetch_product['id']; ?>">
                   <p class="price">price $<?= $fetch_product['price']; ?>/-</p>
                 </div>
                 <a href="checkout.php?get_id=<?= $fetch_product['id']; ?>" class="btn">buy now</a>

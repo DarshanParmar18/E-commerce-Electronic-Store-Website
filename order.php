@@ -38,18 +38,13 @@ if (isset($_POST['logout'])) {
   <?php include 'components/header.php'; ?>
   <div class="main">
     <div class="banner">
-      <h1>Order</h1>
+      <h1>Orders</h1>
     </div>
     <div class="title2">
       <a href="./index.php"><span>Our Order</span></a>
     </div>
 
     <section class="orders">
-      <div class="title">
-        <img src="./img/download.png" alt="" class="logo">
-        <h1>My orders</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni obcaecati, perferendis voluptatibus corrupti porro illo.</p>
-      </div>
 
       <div class="box-container">
         <?php

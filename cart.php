@@ -108,17 +108,20 @@ if (isset($_POST["empty_cart"])) {
         ?>
               <form action="" method="post" class="box">
                 <input type="hidden" name="cart_id" value="<?= $fetch_cart['id']; ?>">
-                <img src="data:image;base64,<?php echo base64_encode($fetch_product['image']); ?>" alt="" class="img">
-                <h3 class="name"><?= $fetch_product['name']; ?></h3>
-                <div class="flex">
-                  <p class="price">price: <br> &#x20B9;<?= $fetch_product['price']; ?>/-</p>
-                  <input type="number" name="qty" required min="1" value="<?= $fetch_cart['qty']; ?>" max="99" maxlength="2" class="qty">
-
-                  <button type="submit" name="update_cart" class="bx bxs-edit fa-edit"></button>
+                <div class="img-container">
+                  <img src="data:image;base64,<?php echo base64_encode($fetch_product['image']); ?>" alt="" class="cart-img">
                 </div>
-                <p class="sub-total">Sub total : <span>&#x20B9;<?= $sub_total = ($fetch_cart['qty'] * $fetch_cart['price']) ?></span></p>
-                <button type="submit" name="delete_item" class="btn" onclick="return confirm('delete this item');">Delete</button>
+                <div class="detail">
+                  <h3 class="name"><?= $fetch_product['name']; ?></h3>
+                  <div class="flex">
+                    <p class="price">price: <br> &#x20B9;<?= $fetch_product['price']; ?>/-</p>
+                    <input type="number" name="qty" required min="1" value="<?= $fetch_cart['qty']; ?>" max="99" maxlength="2" class="qty">
 
+                    <button type="submit" name="update_cart" class="bx bxs-edit fa-edit"></button>
+                  </div>
+                  <p class="sub-total">Sub total : <span>&#x20B9;<?= $sub_total = ($fetch_cart['qty'] * $fetch_cart['price']) ?></span></p>
+                  <button type="submit" name="delete_item" class="btn" onclick="return confirm('delete this item');">Delete</button>
+                </div>
               </form>
         <?php
               $grand_total += $sub_total;
@@ -133,6 +136,7 @@ if (isset($_POST["empty_cart"])) {
       </div>
       <?php
       if ($grand_total != 0) {
+
       ?>
         <div class="cart-total">
           <p>total amount payable : <span>&#x20B9;<?= $grand_total; ?>/-</span></p>
