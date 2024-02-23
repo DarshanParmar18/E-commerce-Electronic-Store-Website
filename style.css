@@ -922,6 +922,9 @@ nav.flex {
 }
 .slide5 {
   /* background-image: url("./img/4.jpg"); */
+  img {
+    width: 100%;
+  }
 }
 
 .left-arrow,
@@ -1612,10 +1615,6 @@ textarea {
   margin: 0px 32px;
   padding: 0 7px;
   border-radius: 4px;
-}
-.input-field input {
-  /* max-width: 34rem; */
-  /* box-shadow: none; */
 }
 
 footer {
