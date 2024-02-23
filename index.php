@@ -118,7 +118,7 @@ if (isset($_POST['logout'])) {
           <div class="slider-cover">
             <div class="slide-detail">
 
-              <a href="view_products.php">
+              <a href="view_products.php?category=watch">
                 <img src="./img/electronicImgs/home-watch-cover.webp" alt="">
               </a>
             </div>

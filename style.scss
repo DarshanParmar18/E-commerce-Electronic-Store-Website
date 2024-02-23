@@ -16,6 +16,11 @@
   font-size: 0px;
 }
 
+.details {
+  font-size: 15px;
+  padding: 10px 0;
+}
+
 .admin-header {
   top: 0;
 }
@@ -168,5 +173,11 @@
         }
       }
     }
+  }
+}
+
+.show-products {
+  img {
+    height: 15rem;
   }
 }

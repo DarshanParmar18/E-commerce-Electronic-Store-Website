@@ -1815,7 +1815,8 @@ footer .bottom-footer {
         justify-content: center;
 
         .img {
-          height: 20rem;
+          height: 15rem;
+          margin: 2rem 0;
         }
       }
       .img-container {
