@@ -68,13 +68,10 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <div class="main-container">
+    <div class="register-container">
         <div class="form-container">
             <div class="title">
-                <img src="./img/download.png" alt="">
                 <h1>Register Now</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus placeat ipsa in, sit impedit est!
-                </p>
             </div>
             <form action="" method="post">
                 <div class="input-field">
@@ -96,6 +93,9 @@ if (isset($_POST['submit'])) {
                 <input type="submit" name='submit' value="register now" class="btn">
                 <p>already have an account ? </p><a href="login.php">Login now</a>
             </form>
+        </div>
+        <div class="login-img-container">
+            <h1>Gada Electronics</h1>
         </div>
     </div>
 

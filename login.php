@@ -52,12 +52,13 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <div class="main-container">
+    <div class="Login-container">
+        <div class="login-img-container">
+            <h1>Gada Electronics</h1>
+        </div>
         <div class="form-container">
             <div class="title">
                 <h1>Login Now</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus placeat ipsa in, sit impedit est!
-                </p>
             </div>
             <form action="" method="post">
                 <div class="input-field">
@@ -67,8 +68,8 @@ if (isset($_POST['submit'])) {
                 <div class="input-field">
                     <p>Your password <sup>*</sup></p>
                     <input type="password" name="pass" required placeholder="Enter your password" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '') ">
+                    <input type="submit" name='submit' value="login now" class="btn">
                 </div>
-                <input type="submit" name='submit' value="login now" class="btn">
                 <p>don't have an account ? </p><a href="register.php">Register now</a>
             </form>
         </div>

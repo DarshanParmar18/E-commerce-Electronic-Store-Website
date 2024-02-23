@@ -54,9 +54,9 @@ if (isset($_POST['logout'])) {
               <source src="./img/electronicImgs/homeSecVid1.webm" type="video/mp4">
             </video>
             <div class="slide-detail">
-              <h1>Lorem ipsum dolor sit</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <h4><a href="view_products.php">Shop now</a></h4>
+              <h1> Galaxy S24 Ultra </h1>
+              <p>Get up to $19,999 instant trade-in credit</p>
+              <h4><a href="view_products.php?category=mobile">Shop now</a></h4>
             </div>
           </div>
           <div class="hero-dec-top"></div>
@@ -85,10 +85,12 @@ if (isset($_POST['logout'])) {
         <div class="slider__slider slide3">
           <div class="overlay"></div>
           <div class="slider-cover">
+            <img src="/img/electronicImgs/home-refrigerator.webp" alt="">
             <div class="slide-detail">
-              <h1>Welcome to my shop</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <h4><a href="view_products.php">Shop now</a></h4>
+              <h1>New Mega</h1>
+              <h1>Capacity fridge</h1>
+              <p>With up to 12% more capacity than 2022 models and up to four</p>
+              <h4><a href="view_products.php?category=homeAppliances">Shop now</a></h4>
             </div>
           </div>
           <div class="hero-dec-top"></div>
@@ -98,10 +100,13 @@ if (isset($_POST['logout'])) {
         <div class="slider__slider slide4">
           <div class="overlay"></div>
           <div class="slider-cover">
+            <img src="./img/electronicImgs/icons8-ps.png" class="ps5" alt="">
+            <video autoplay muted loop id="myVideo2">
+              <source src="./img/electronicImgs/ps5-slim-overview-video.mp4" type="video/mp4">
+            </video>
             <div class="slide-detail">
-              <h1>Welcome to my shop</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <h4><a href="view_products.php">Shop now</a></h4>
+              <h1>PLAY LIKE NEVER BEFORE</h1>
+              <h4><a href="view_products.php?category=games">Shop now</a></h4>
             </div>
           </div>
           <div class="hero-dec-top"></div>
@@ -112,9 +117,10 @@ if (isset($_POST['logout'])) {
           <div class="overlay"></div>
           <div class="slider-cover">
             <div class="slide-detail">
-              <h1>Welcome to my shop</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <h4><a href="view_products.php">Shop now</a></h4>
+
+              <a href="view_products.php">
+                <img src="./img/electronicImgs/home-watch-cover.webp" alt="">
+              </a>
             </div>
           </div>
           <div class="hero-dec-top"></div>
