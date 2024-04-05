@@ -257,7 +257,7 @@ if (isset($_POST['logout'])) {
             <img src="./img/electronicImgs/apple watch1.jpg" alt="">
             <div class="product-detail">
               <h3>Apple Watch SE</h3>
-              <p>From <b>$249</b></p>
+              <p>From <b>₹2490</b></p>
             </div>
           </a>
         </div>
@@ -266,7 +266,7 @@ if (isset($_POST['logout'])) {
             <img src="./img/electronicImgs/apple watch2.jpg" alt="">
             <div class="product-detail">
               <h3>Apple Watch Series 9</h3>
-              <p>From <b>$399</b></p>
+              <p>From <b>₹3990</b></p>
               <!-- <a href="view_products.php" class='btn'>Shop now</a> -->
             </div>
           </a>
@@ -276,7 +276,7 @@ if (isset($_POST['logout'])) {
             <img src="./img/electronicImgs/apple watch3.jpg" alt="">
             <div class="product-detail">
               <h3>Apple Watch Ultra 2</h3>
-              <p>From <b>$249</b></p>
+              <p>From <b>₹2790</b></p>
               <!-- <a href="view_products.php" class='btn'>Shop now</a> -->
             </div>
           </a>
@@ -286,7 +286,7 @@ if (isset($_POST['logout'])) {
             <img src="./img/electronicImgs/Galaxy-S23-Ultra.webp" alt="">
             <div class="product-detail">
               <h3>Galaxy-S23-Ultra</h3>
-              <p>From <b>$349</b></p>
+              <p>From <b>₹3590</b></p>
               <!-- <a href="view_products.php" class='btn'>Shop now</a> -->
             </div>
           </a>
@@ -296,7 +296,7 @@ if (isset($_POST['logout'])) {
             <img src="./img/electronicImgs/galaxy-s24.avif" alt="">
             <div class="product-detail">
               <h3>Galaxy-S23-Ultra</h3>
-              <p>From <b>$349</b></p>
+              <p>From <b>₹5490</b></p>
               <!-- <a href="view_products.php" class='btn'>Shop now</a> -->
             </div>
           </a>
@@ -306,7 +306,7 @@ if (isset($_POST['logout'])) {
             <img src="./img/electronicImgs/washing machine2.png" alt="">
             <div class="product-detail">
               <h3>Galaxy-S23-Ultra</h3>
-              <p>From <b>$349</b></p>
+              <p>From <b>₹1490</b></p>
               <!-- <a href="view_products.php" class='btn'>Shop now</a> -->
             </div>
           </a>
@@ -316,7 +316,7 @@ if (isset($_POST['logout'])) {
             <img src="./img/electronicImgs/refrigerator.png" alt="">
             <div class="product-detail">
               <h3>Galaxy-S23-Ultra</h3>
-              <p>From <b>$349</b></p>
+              <p>From <b>₹4490</b></p>
               <!-- <a href="view_products.php" class='btn'>Shop now</a> -->
             </div>
           </a>
@@ -326,7 +326,7 @@ if (isset($_POST['logout'])) {
             <img src="./img/electronicImgs/PlayStationPng.png" alt="">
             <div class="product-detail">
               <h3>Galaxy-S23-Ultra</h3>
-              <p>From <b>$349</b></p>
+              <p>From <b>₹3290</b></p>
               <!-- <a href="view_products.php" class='btn'>Shop now</a> -->
             </div>
           </a>

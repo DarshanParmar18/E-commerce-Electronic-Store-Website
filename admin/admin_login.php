@@ -8,57 +8,30 @@ if (isset($_SESSION['admin_id'])) {
 }
 
 
-// if (isset($_POST['submit'])) {
-
-//   $name = $_POST['name'];
-//   $name = strip_tags($name);
-//   $pass = sha1($_POST['pass']);
-//   $pass = strip_tags($pass);
-
-//   $select_admin = $conn->prepare("SELECT * FROM `admin` WHERE name = ? AND password = ?");
-//   $select_admin->execute([$name, $pass]);
-//   $row = $select_admin->fetch(PDO::FETCH_ASSOC);
-
-//   if ($select_admin->rowCount() > 0) {
-//     $_SESSION['admin_id'] = $row["id"];
-//     $_SESSION["admin_name"] = $row["name"];
-//     // $_SESSION["admin_email"] = $row["pass"];
-//     $success_msg[] = 'login sucessfull!';
-//     header('location: admin_dashboard.php');
-//   } else {
-//     $error_msg[] = 'incorrect username or password!';
-
-//     // echo 'incorrect username and password';
-//     // header('location: admin_dashboard.php');
-//   }
-// }
-// 
-
 
 if (isset($_POST['submit'])) {
   $name = $_POST['name'];
   $name = strip_tags($name);
   $pass = sha1($_POST['pass']);
   $pass = strip_tags($pass);
-
   $select_admin = $conn->prepare("SELECT * FROM `admin` WHERE name = ? AND password = ?");
   $select_admin->execute([$name, $pass]);
   $row = $select_admin->fetch(PDO::FETCH_ASSOC);
   if ($select_admin->rowCount() > 0) {
+
     $_SESSION['admin_id'] = $row["id"];
     $_SESSION["admin_name"] = $row["name"];
-    // $_SESSION["admin_email"] = $row["pass"];
+    $_SESSION["admin_pass"] = $row["pass"];
+    echo 'login successful!';
     $success_msg[] = 'login successful!';
     header('location: admin_dashboard.php');
   } else {
+    echo 'incorrect username and password';
     $error_msg[] = 'incorrect username or password!';
-    header('location: admin_dashboard.php');
+    header('location: admin_login.php');
   }
 }
 ?>
-
-
-
 
 
 
@@ -87,10 +60,8 @@ if (isset($_POST['submit'])) {
     <div class="form-container">
       <div class="title">
         <h1>Login Now</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus placeat ipsa in, sit impedit est!
-        </p>
       </div>
-      <form action="" method="post">
+      <form action="admin_login.php" method="post">
         <div class="input-field">
           <p>Your Name <sup>*</sup></p>
           <input type="text" name="name" required placeholder="Enter your username" maxlength="20" class="box" oninput="this.value = this.value.replace(/\s/g, '')">

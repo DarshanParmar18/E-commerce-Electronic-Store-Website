@@ -14,10 +14,10 @@
       <i class="bx bxs-user" id="user-btn2"></i>
     </div>
     <div class="user-box ">
-      <p>username : <span><?php //echo $_SESSION['admin_name']; 
+      <p>username : <span><?php //echo $_SESSION['admin_name'];
                           ?></span></p>
       <a href="admin_login.php" class="btn">Login</a>
-      <a href="register.php" class="btn">Register</a>
+      <!-- <a href="register.php" class="btn">Register</a> -->
       <form method="post">
         <button type="submit" name="logout" class="logout-btn">Log out</button>
       </form>

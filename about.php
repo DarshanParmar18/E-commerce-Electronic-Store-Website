@@ -38,10 +38,10 @@ if (isset($_POST['logout'])) {
             <h1>About us</h1>
         </div>
         <div class="title2">
-            <a href="./index.php"><span>About</span></a>
+            <a href="./index.php"><span>Back</span></a>
         </div>
         <div class="about-category">
-            <div class="box">
+            <!-- <div class="box">
                 <img src="" alt="">
                 <div class="detail">
                     <span>coffee</span>
@@ -72,12 +72,11 @@ if (isset($_POST['logout'])) {
                     <h1>lemon green</h1>
                     <a href="view_products.php" class="btn">shop now</a>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <section class="services">
             <div class="title">
-                <img src="" alt="" class="logo">
                 <h1>Why Choose us</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore a quos recusandae soluta consequatur cum.</p>
             </div>
@@ -116,7 +115,7 @@ if (isset($_POST['logout'])) {
         <div class="about">
             <div class="row">
                 <div class="img-box">
-                    <img src="./img/3.png" alt="">
+                    <img src="./img/electronicImgs/aboutpng.png" alt="">
                 </div>
                 <div class="detail">
                     <h1>Visit our beautiful showroom!</h1>
@@ -126,14 +125,13 @@ if (isset($_POST['logout'])) {
                         with
                         some one of a kind living decor, Blossom With Love can help.
                     </p>
-                    <a href="./view_products.php" class='btn'>Shop now</a>
+                    <a href="./view_products.php?category" class='btn'>Shop now</a>
                 </div>
             </div>
         </div>
 
         <div class="testimonial-container">
             <div class="title">
-                <img src="." alt="" class="logo">
                 <h1>What people say about us</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci?</p>
             </div>

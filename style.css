@@ -1433,6 +1433,7 @@ nav.flex {
   position: relative;
   perspective: 1000;
   padding-top: 2rem;
+  background-image: url("./img/bg.jpg");
 }
 .testimonial-container .container .testimonial-item {
   border-radius: 5px;

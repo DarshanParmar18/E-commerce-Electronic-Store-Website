@@ -57,9 +57,7 @@ if (isset($_POST['cancel'])) {
 
     <section class="order-detail">
       <div class="title">
-        <img src="./img/download.png" alt="" class="logo">
         <h1>Orders details</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni obcaecati, perferendis voluptatibus corrupti porro illo.</p>
       </div>
 
       <div class="box-container">
@@ -82,7 +80,7 @@ if (isset($_POST['cancel'])) {
                     <img src="data:image;base64,<?php echo base64_encode($fetch_product['image']); ?>" alt="" class="img">
                     <p class="price"><?= $fetch_product['price']; ?> X <?= $fetch_order['qty']; ?></p>
                     <h3 class="name"><?= $fetch_product['name']; ?> </h3>
-                    <p class="grand-total">Total amount payable : <span>$<?= $grand_total; ?></span></p>
+                    <p class="grand-total">Total amount payable : <span>₹<?= $grand_total; ?></span></p>
                   </div>
                   <div class="col">
                     <p class="title">billing address</p>

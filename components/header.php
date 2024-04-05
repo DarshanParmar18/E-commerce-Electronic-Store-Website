@@ -1,6 +1,6 @@
 <header class='header'>
     <nav class="flex">
-        <a href="index.php" class="logo"><img src="/img/electronicImgs/Samsung-logo.webp" alt="Logo"></a>
+        <a href="index.php" class="logo">Gada Electronics</a>
         <div class="navbar">
             <a href="index.php">Home</a>
             <a href="view_products.php?category">Products</a>

@@ -157,7 +157,7 @@ if (isset($_GET['delete'])) {
           <div class="box">
             <img src="data:image;base64,<?php echo base64_encode($fetch_products['image']); ?>" alt="" class="img">
             <div class="name"><?= $fetch_products['name']; ?></div>
-            <div class="price">$<span><?= $fetch_products['price']; ?></span>/-</div>
+            <div class="price">₹<span><?= $fetch_products['price']; ?></span>/-</div>
             <div class="details"><span><?= $fetch_products['product_detail']; ?></span></div>
             <div class="flex-btn">
               <a href="update_product.php?update=<?= $fetch_products['id']; ?>" class="option-btn btn">update</a>

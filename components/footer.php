@@ -10,7 +10,8 @@
     <!-- <div class="overlay"></div> -->
     <div class="footer-content">
         <div class="img-box">
-            <img src="./img/electronicImgs/Samsung-logo.webp" alt="logo2">
+            <!-- <img src="./img/electronicImgs/Samsung-logo.webp" alt="logo2"> -->
+            <h1>Gada Electronics</h1>
         </div>
         <div class="inner-footer">
             <div class="card">
